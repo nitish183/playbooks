@@ -1,0 +1,19 @@
+---
+  - name: Configure Web server
+    gather_facts: false
+    hosts: node1
+    remote_user: ansible
+    become: yes
+    become_user: root
+    become_method: sudo
+#    tasks:
+#     - include: tasks/web_setup.yml
+
+#    handlers:
+#      - name: restart httpd
+#        service:
+#          name: httpd
+#          state: restarted
+    roles: 
+      - /home/ansible/roles/web
+       

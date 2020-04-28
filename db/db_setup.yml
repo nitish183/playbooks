@@ -1,0 +1,44 @@
+---
+ - name: Deploy db server
+   hosts: node2
+   gather_facts: false
+   remote_user: ansible
+   become: yes
+   become_user: root
+   become_method: su
+   tasks:
+   - include: tasks/db_setup.yml
+
+
+   #vars:
+    # db_name: "test_db"
+    # db_user: "db_user"
+    # db_user_password: "12345"
+     
+   #tasks:
+   # - name: Install mysqldb
+   #   yum:
+   #    name: "{{ item }}"
+   #    state: installed
+   #   with_items:
+   #    - mariadb
+   #    - mariadb-libs
+   #    - mariadb-server 
+   # 
+   # - name: Start mysql service
+   #   service:
+   #    name: mariadb
+   #    state: started
+   #    enabled: yes
+# 
+   # - name: Create App Database
+   #   mysql_db: 
+   #    name= "{{ db_name }}" 
+   #    state=present
+ #
+  #  - name: Create DB user
+  #    mysql_user:
+   #    name: "{{ db_user }}"
+    #   password: "{{ db_user_password }}"
+    #   priv: '*.*:ALL'
+    #   state: present
