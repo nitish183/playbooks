@@ -1,0 +1,14 @@
+---
+- name: Server patching
+  hosts: all
+  gather_facts: no
+  strategy: free
+  become: true
+  become_user: root
+  become_method: sudo
+
+  tasks:
+  - name: install httpd package
+    yum:
+     name: httpd
+     state: latest
