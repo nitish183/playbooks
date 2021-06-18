@@ -8,6 +8,11 @@
   become_method: sudo
 
   tasks:
+  -name: disabling firewall service
+   service:
+    name: firewalld
+    state: stopped
+  
   - name: install httpd package
     yum:
      name: httpd
