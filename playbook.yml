@@ -1,6 +1,6 @@
 ---
 - name: Server patching
-  hosts: all
+  hosts: dev
   gather_facts: no
   strategy: free
   become: true
@@ -22,3 +22,8 @@
     service:
       name: httpd
       state: started
+
+  - name: copy index file 
+    copy:
+      src: ./index.html
+      dest: /var/www/html
