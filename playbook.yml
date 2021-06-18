@@ -11,14 +11,14 @@
   - name: disabling firewall service
     service:
      name: firewalld
-     state: stopped
+     state: started
 
   - name: install httpd package
     yum:
      name: httpd
-     state: latest
+     state: absent
 
-  - name: start httpd service
-    service:
-      name: httpd
-      state: started
+  # - name: start httpd service
+    # service:
+      # name: httpd
+      # state: started
