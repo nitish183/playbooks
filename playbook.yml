@@ -27,3 +27,7 @@
     copy:
       src: ./index.html
       dest: /var/www/html
+  - name: copy .css file 
+    copy:
+      src: ./app.css
+      dest: /var/www/html
