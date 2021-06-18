@@ -10,5 +10,10 @@
   tasks:
   - name: install httpd package
     yum:
-     name: elinks
+     name: httpd
      state: latest
+
+  - name: start httpd service
+    service:
+      name: httpd
+      state: started
