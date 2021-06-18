@@ -1,0 +1,17 @@
+body{
+	text-align: center;
+}
+
+.content{
+	padding-top: 200px;
+}
+
+.navbar-nav{
+	font-family: 'Cabin';
+	font-weight: 700;
+	font-size: 1.7em;
+}
+
+.fa{
+	font-size: 40px;
+}
